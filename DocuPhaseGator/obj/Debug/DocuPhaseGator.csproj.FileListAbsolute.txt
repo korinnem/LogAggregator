@@ -1,0 +1,6 @@
+c:\users\kmartin\documents\visual studio 2015\Projects\DocuPhaseGator\DocuPhaseGator\bin\Debug\DocuPhaseGator.exe.config
+c:\users\kmartin\documents\visual studio 2015\Projects\DocuPhaseGator\DocuPhaseGator\bin\Debug\DocuPhaseGator.exe
+c:\users\kmartin\documents\visual studio 2015\Projects\DocuPhaseGator\DocuPhaseGator\bin\Debug\DocuPhaseGator.pdb
+c:\users\kmartin\documents\visual studio 2015\Projects\DocuPhaseGator\DocuPhaseGator\obj\Debug\DocuPhaseGator.csprojResolveAssemblyReference.cache
+c:\users\kmartin\documents\visual studio 2015\Projects\DocuPhaseGator\DocuPhaseGator\obj\Debug\DocuPhaseGator.exe
+c:\users\kmartin\documents\visual studio 2015\Projects\DocuPhaseGator\DocuPhaseGator\obj\Debug\DocuPhaseGator.pdb
