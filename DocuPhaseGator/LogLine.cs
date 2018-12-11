@@ -66,7 +66,7 @@ namespace LogIngest
             }
             else
             {
-                logLocation = "Error Parsing Log Location";
+                logLocation = "No LogLocation Found";
             }
 
             return logLocation;
@@ -84,7 +84,7 @@ namespace LogIngest
 
             if (logText == "" || logText == null)
             {
-                logText = "No Additional Information found in log";
+                logText = "No LogText found";
             }
             return logText;
         }
