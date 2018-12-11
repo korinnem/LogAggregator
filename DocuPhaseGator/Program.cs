@@ -79,7 +79,7 @@ namespace LogIngest
                     {
                         //do nothing
                     }
-                    else if (trimLine != null)
+                    else 
                     {
                         String regexMatch = @"\d{4}";
                         if (trimLine.Length > 3)
@@ -88,8 +88,7 @@ namespace LogIngest
                             {
                                 if (logHolding != "")
                                 {
-                                    LogLine pushLog = new LogLine(logHolding, logList[i]);
-                                    listOfLogs.Add(pushLog);
+                                    listOfLogs.Add(pushLog(logHolding, logList[i]));
                                     logHolding = "";
 
                                 }
@@ -101,16 +100,26 @@ namespace LogIngest
                             }
                         }
                     }
-                    else
-                    {
-                        LogLine pushLog = new LogLine(logHolding, logList[i]);
-                        listOfLogs.Add(pushLog);
-                        logHolding = "";
+                    //else
+                    //{
+                    //    pushLog(logHolding, logList[i]);
+                    //    logHolding = "";
 
-                    }
+                    //}
+                }
+                if (logHolding != null || logHolding != "")
+                {
+                    listOfLogs.Add(pushLog(logHolding, logList[i]));
+                    logHolding = "";
                 }
             }
             return listOfLogs;
+        }
+
+        static LogLine pushLog(String logHolding, string logSource)
+        {
+            LogLine pushLog = new LogLine(logHolding, logSource);
+            return pushLog;
         }
 
         static List<LogLine> sortList(List<LogLine> allLogs)
