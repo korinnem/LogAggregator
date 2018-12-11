@@ -17,10 +17,7 @@ namespace LogIngest
             writeLogs(sortedList);
 
         }
-
-
-
-        // --- Checks the default location for logs that are accessible ---
+        
         static List<String> logsExist(String logDir)
         {
             List<String> logList = new List<String>();
@@ -33,8 +30,7 @@ namespace LogIngest
                 // TODO: change this so that it works in the case of a custom logPath
                 // instead of hard coding the removal of the path
                 string logName = name.Substring(35);
-
-                // --- add filename to the list ---
+                
                 logList.Add(logName);
             }
 
@@ -62,8 +58,7 @@ namespace LogIngest
                 return null;
             }
         }
-
-        // --- use the logList to read all logs into a single List<LogLine> --- 
+        
         static List<LogLine> readLogs(List<String> logList)
         {
             String logHolding = "";
@@ -100,14 +95,8 @@ namespace LogIngest
                             }
                         }
                     }
-                    //else
-                    //{
-                    //    pushLog(logHolding, logList[i]);
-                    //    logHolding = "";
-
-                    //}
                 }
-                if (logHolding != null || logHolding != "")
+                if (logHolding != null && logHolding != "")
                 {
                     listOfLogs.Add(pushLog(logHolding, logList[i]));
                     logHolding = "";
